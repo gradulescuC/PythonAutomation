@@ -85,9 +85,7 @@ if __name__ == '__main__':  -> Verifica daca programul este executat individual 
     #c = a + b -> Returneaza eroare de concatenare
     c = str(a) + b
     print(c)
-
-# CDRL + D  -> Duplica linia curenta
-# ALT + click pe numele variabilei -> Pune un hint pe data type"""
+"""
 
 # ------------------------------------------------------------------------------------------------------------
 # Built in functions
