@@ -1,0 +1,10 @@
+CTRL + / -> comenteaza o singura linie de rand (sau mai multe daca selectati mai multe)
+''' sau """ -> Comenteaza mai multe linii de rand
+# ALT + click pe numele variabilei -> Pune un hint pe data type
+CTRL + D -> Dubleaza o linie de cod pe care este pus cursorul
+SHIFT + TAB sterge spatiile
+pip3 install pylint -> instaleaza un utilitar pentru testare statica
+pylint ex2.py -> Testeaza corectitudinea codului din punct de vedere standarde de codare
+
+pip = installer de pachete care ofera accesul catre toate pachetele opensource de python publicate
+
