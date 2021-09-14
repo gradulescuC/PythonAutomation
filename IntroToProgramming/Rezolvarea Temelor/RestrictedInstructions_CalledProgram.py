@@ -6,6 +6,6 @@ if username == 'Alina' and password =="abc123":
 else:
     authorized = 0
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     print(username)
     print(password)
