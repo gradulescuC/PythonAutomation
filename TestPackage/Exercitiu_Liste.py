@@ -22,7 +22,7 @@ print("Elementele din lista a sunt:", a[0:len(a)])  #Afiseaza toate elementele d
                                                     # len este prescurtarea de la length si arata cate elemente sunt in lista respectiva
 print(b.count("mere")) #Functia count arata cate  elementele din cele mentionate in paranteza exista in lista respectiva
 c[-1] = "Portocale" #Modifica un singur element din lista
-
+print(c)
 print(sum(a)) #Calculeaza suma tuturor elementelor din lista a
 
 a.clear()
