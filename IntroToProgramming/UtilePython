@@ -3,8 +3,16 @@ CTRL + / -> comenteaza o singura linie de rand (sau mai multe daca selectati mai
 # ALT + click pe numele variabilei -> Pune un hint pe data type
 CTRL + D -> Dubleaza o linie de cod pe care este pus cursorul
 SHIFT + TAB sterge spatiile
+CTRL + ALT + L -> Formateaza codul
+
+
 pip3 install pylint -> instaleaza un utilitar pentru testare statica
-pylint ex2.py -> Testeaza corectitudinea codului din punct de vedere standarde de codare
+pylint ex2.py -> Testeaza corectitudinea codului din punct de vedere standarde de codare si ofera optiuni de imbunatatire. Se executa in terminal
+
+Nota:
+- Daca programul se afla intr-un pachet, trebuie sa precedam numele programului cu numele pachetului inainte de a rula pylint
+- putem sa scriem numele pachetului si sa apasam TAB ca sa se completeze automat
+- Eroarea "Missing module docstring (missing-module-docstring)" inseamna ca trebuie sa adaugam ceva documentatie la inceput de program
 
 pip = installer de pachete care ofera accesul catre toate pachetele opensource de python publicate
 
