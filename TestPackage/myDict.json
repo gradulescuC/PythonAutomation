@@ -1,0 +1,24 @@
+{
+  "a": "My data for a",
+  "b": "My data for b",
+  "7": "Python",
+  "True": [
+    5,
+    16,
+    45
+  ],
+  "c": [
+    {
+      "a": 1,
+      "b": "Bella"
+    },
+    {
+      "a": 1,
+      "b": "Ciao"
+    },
+    {
+      "a": 1,
+      "b": "aloha"
+    }
+  ]
+}
