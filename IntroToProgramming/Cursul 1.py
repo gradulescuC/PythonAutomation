@@ -23,41 +23,43 @@ else:
 # ------------------------------------------------------------------------------------------------------------
 # Basic Operators
 
-"""x = input("Enter the first number ") // Atribuirea unei valori de la tastatura unei variabile
+x = input("Enter the first number ") # Atribuirea unei valori de la tastatura unei variabile
 y = input("Enter second value ")
-output = int(x) + int(y) // conversia fortata a unei variabile (by default de la tastatura se defineste string)
-output = int(x) % int(y)  // functia modulo - util cand verificam daca un numar este par sau impar
+output = int(x) + int(y) #  conversia fortata a unei variabile (by default de la tastatura se defineste string)
+output = int(x) % int(y)  # functia modulo - util cand verificam daca un numar este par sau impar
 x,y,z = 1,2,3
 print(z)
-print(f"{x} with {y} is {output}" )"""
+print(f"{x} with {y} is {output}")
 # ------------------------------------------------------------------------------------------------------------
 
 # Printarea cu formatare
-"""print(f"{x} with {y} is {output}") // printarea cu formatare
+print(f"{x} with {y} is {output}")  #printarea cu formatare
 print(f"{x} modulo {y} is {output}" )
 
-Alte exemple de formatare: 
+# Alte exemple de formatare:
 name = 'Johnny'
 age = 55
 
 
-print('Hi' + name + '. You\'re' + str(age) + 'years old') // Exemplu fara formatare
-print(f'Hi {name}, You are {age} years old) // Exemplu cu formatare
+print('Hi' + name + '. You\'re' + str(age) + 'years old') # Exemplu fara formatare
+print(f'Hi {name}, You are {age} years old') # Exemplu cu formatare
 
+"""
 Formatarea inainte de python 3 se facea cu functia .format:
-Exemple:
+Exemple:"""
+
 print('Hi {}. You  are {} years old.'.format('Johnny',55))
 print('Hi {}. You  are {} years old.'.format(name, age))
 print('Hi {new_name}. You  are {new_age} years old.'.format(new_name = 'sally', new_age=100))
-"""
+
 # ------------------------------------------------------------------------------------------------------------
 # Variabilele sunt case sensitive, si putem sa alocam valoarea de la adresa de memorie a unei variabile la adresa de memorie a altei variabile
-"""
+
 user_5 = 100
-print(uSer_5) #nu va merge pentru ca numele variabilei este case sensitive
-score = user_5
-print(score)
-"""
+#print(uSer_5) #nu va merge pentru ca numele variabilei este case sensitive
+#score = user_5
+#print(score)
+
 
 # ------------------------------------------------------------------------------------------------------------
 # Constantele nu sunt suportate de python, motiv pentru care orice vrem sa definim ca si constanta
@@ -74,9 +76,9 @@ PI = 3.14
 """Exemple de dunders:
 _x = 7 #specifica o variabila ce nu poate fi folosita in alte module. Nu este DUNDER
 __x = 8 -> Variabilele cu __ sunt rezervate pentru metode specifice python, si nu este recomandam sa definim variabile de tip DUNDER
-
-Exemplu:
-if __name__ == '__main__':  -> Verifica daca programul este executat individual sau este apelat dintr-un alt program
+"""
+#Exemplu:
+if __name__ == '__main__':  # Verifica daca programul este executat individual sau este apelat dintr-un alt program
     print("Another module")
     a: int = 5
     b: str = 'Ana are mere'
@@ -85,11 +87,10 @@ if __name__ == '__main__':  -> Verifica daca programul este executat individual 
     #c = a + b -> Returneaza eroare de concatenare
     c = str(a) + b
     print(c)
-"""
 
 # ------------------------------------------------------------------------------------------------------------
 # Built in functions
-"""
+
 greet = 'Hello'
 print(len(greet))
 print(greet[0:len(greet)])
@@ -103,10 +104,10 @@ name = 'Andreea'
 print(type(name))
 name = 1
 print(type(name))
-"""
+
 # ------------------------------------------------------------------------------------------------------------
 #immutability -> Nu putem sa modificam doar o anumita pozitie intr-o variabila
-"""selfish = 1
+selfish = 1
 print(selfish)
 selfish[0] = '1212'
 print(selfish)
@@ -134,7 +135,7 @@ print(selfish[-1])
 print(selfish[-3])
 print(selfish[::-1])
 print(selfish[::-2])
-"""
+
 
     
 

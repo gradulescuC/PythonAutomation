@@ -35,7 +35,6 @@ a.append("banane")
 print(a)
 a.append(3)  # Se pot adauga mai multe elemente cu flow control, intr-un curs viitor
 print(a)
-
 print(3 in a)  # Verifica daca un anumit element exista intr-o lista
 
 # Tuples
@@ -81,7 +80,6 @@ myDict = {"a": "My data for a",
           True: [5, 16, 45],  # Putem de asemenea sa adaugam valori boolean intr-un dictionar
           "c": [dict(a=1, b="Bella"), dict(a=1, b="Ciao"), dict(a=1, b="aloha")]
           }
-
 
 print(myDict)
 print(myDict1)

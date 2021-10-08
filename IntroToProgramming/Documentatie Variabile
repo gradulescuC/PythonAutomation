@@ -10,6 +10,19 @@ e) Orice variabila trebuie sa urmeze formatele urmatoare:
 - snake case - Ex:  nume_variabila
 - camel case - Ex:  numeVariabila
 
+2. Tipuri de date
+a) Primitive
+- Int
+- String
+- Double
+- Boolean
+
+b) Non-Primitive
+- Liste
+- Tupluri
+- Seturi
+- Dictionare
+
 Linkuri cu exercitii pentru variabile:
 
 https://www.w3schools.com/python/python_variables_exercises.asp
