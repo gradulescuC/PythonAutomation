@@ -6,9 +6,7 @@ Calculator class used for operations
 -- un constructor este un bloc de cod care ne poate ajuta sa definim atribute ale clasei valabile in toata clasa
 """
 
-from math import sqrt
-
-from IntroToProgramming.OOP.Curs4 import mathOperations
+from OOP.Curs4 import mathOperations
 
 
 class Calculator:
