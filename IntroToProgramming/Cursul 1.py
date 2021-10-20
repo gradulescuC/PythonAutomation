@@ -1,13 +1,29 @@
-# Verifica daca userul dat de la tastatura este acelasi cu userul stocat intr-o variabila
-"""expectedUsr = 'Gabriela'
+"""
+
+Notiuni de acoperit:
+- Variabile (ce este o variabila, la ce foloseste, initializarea unei variabile)
+- Input
+- Print
+- Formatarea in print
+- Constante (ce este o constanta, la ce foloseste, cum se declara)
+- Dunder methods
+- Built-in Functions
+- Immutability
+"""
+
+
+"""1. Variabile + print"""
+# Exercitiu: Verifica daca userul dat de la tastatura este acelasi cu userul stocat intr-o variabila
+
+expectedUsr = 'Gabriela'
 expectedPass = 'abcd'
 expectedSold = 1000
 user = input("Enter User ")
-assert user==expectedUsr"""
+assert user==expectedUsr
 
 # Varianta mai complicata
 
-"""userName = input("Enter your username: ")
+userName = input("Enter your username: ")
 if len(userName) >= 6 and len(userName) <= 12:
     print("Now enter your password")
     userPassword = input("Enter your password: ")
@@ -16,13 +32,19 @@ if len(userName) >= 6 and len(userName) <= 12:
     else:
         print("Incorrect password. Choose another.")
 else:
-    print("Incorrect username. Choose another.")"""
+    print("Incorrect username. Choose another.")
 
+# Variabilele sunt case sensitive, si putem sa alocam valoarea de la adresa de memorie a unei variabile la adresa de memorie a altei variabile
+
+user_5 = 100
+#print(uSer_5) #nu va merge pentru ca numele variabilei este case sensitive
+#score = user_5
+#print(score)
 
 #TODO -> Comparatia pentru password si sold de la tastatura prin consola
 # ------------------------------------------------------------------------------------------------------------
-# Basic Operators
 
+""" 2. Input de la tastatura """
 x = input("Enter the first number ") # Atribuirea unei valori de la tastatura unei variabile
 y = input("Enter second value ")
 output = int(x) + int(y) #  conversia fortata a unei variabile (by default de la tastatura se defineste string)
@@ -32,7 +54,8 @@ print(z)
 print(f"{x} with {y} is {output}")
 # ------------------------------------------------------------------------------------------------------------
 
-# Printarea cu formatare
+""" 3. Formatarea in print"""
+
 print(f"{x} with {y} is {output}")  #printarea cu formatare
 print(f"{x} modulo {y} is {output}" )
 
@@ -40,43 +63,35 @@ print(f"{x} modulo {y} is {output}" )
 name = 'Johnny'
 age = 55
 
-
 print('Hi' + name + '. You\'re' + str(age) + 'years old') # Exemplu fara formatare
 print(f'Hi {name}, You are {age} years old') # Exemplu cu formatare
 
-"""
-Formatarea inainte de python 3 se facea cu functia .format:
-Exemple:"""
+# Formatarea inainte de python 3 se facea cu functia .format:
+# Exemple:
 
 print('Hi {}. You  are {} years old.'.format('Johnny',55))
 print('Hi {}. You  are {} years old.'.format(name, age))
 print('Hi {new_name}. You  are {new_age} years old.'.format(new_name = 'sally', new_age=100))
 
-# ------------------------------------------------------------------------------------------------------------
-# Variabilele sunt case sensitive, si putem sa alocam valoarea de la adresa de memorie a unei variabile la adresa de memorie a altei variabile
-
-user_5 = 100
-#print(uSer_5) #nu va merge pentru ca numele variabilei este case sensitive
-#score = user_5
-#print(score)
-
 
 # ------------------------------------------------------------------------------------------------------------
+
+"""CONSTANTE"""
+
 # Constantele nu sunt suportate de python, motiv pentru care orice vrem sa definim ca si constanta
 # in python va fi scrisa ca si conventie cu majuscule, pentru a anunta eventualele persoane care vor folosi codul
-"""Constant = memory space that cannot change its value.
-Useful when generating all sort of utilities for automation, where we define test inputs that should not change their behaviour
-Ex: username, sleep between automation test steps (we can agree at project level the sleep time)
+# Constant = memory space that cannot change its value.
+# Useful when generating all sort of utilities for automation, where we define test inputs that should not change their behaviour
+# Ex: username, sleep between automation test steps (we can agree at project level the sleep time)
 
 PI = 3.14
-"""
-# ------------------------------------------------------------------------------------------------------------
-# Dunder methods -> DUNDER = Double underscore
 
-"""Exemple de dunders:
+# ------------------------------------------------------------------------------------------------------------
+"""5. Dunder methods -> DUNDER = Double underscore"""
+
+# Exemple de dunders:
 _x = 7 #specifica o variabila ce nu poate fi folosita in alte module. Nu este DUNDER
-__x = 8 -> Variabilele cu __ sunt rezervate pentru metode specifice python, si nu este recomandam sa definim variabile de tip DUNDER
-"""
+# __x = 8 -> Variabilele cu __ sunt rezervate pentru metode specifice python, si nu este recomandam sa definim variabile de tip DUNDER
 #Exemplu:
 if __name__ == '__main__':  # Verifica daca programul este executat individual sau este apelat dintr-un alt program
     print("Another module")
