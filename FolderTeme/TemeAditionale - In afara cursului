@@ -1,0 +1,6 @@
+1. Faceti un input() in care treceti un numar care sa reprezinte ora la care doriti sa va treziti, si sa sune ceasul daca ora trecuta pe input()
+corespunde cu ora din state(US/EASTEN).
+Faceti ca dupa 10 sunete sa se opreasca si sa afiseze mesajul: E ora {input}, trezestete. Altfel sa afiseze ora din US/EASTERN
+
+
+2. Scrieți un program pentru a genera aleatoriu o listă cu 5 numere pare între 100 și 200 inclusiv.

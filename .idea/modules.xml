@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../../PythonCourse/ProiectePython/AdditionalProject/.idea/AdditionalProject.iml" filepath="$PROJECT_DIR$/../../../PythonCourse/ProiectePython/AdditionalProject/.idea/AdditionalProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PythonAutomation.iml" filepath="$PROJECT_DIR$/.idea/PythonAutomation.iml" />
     </modules>
   </component>
