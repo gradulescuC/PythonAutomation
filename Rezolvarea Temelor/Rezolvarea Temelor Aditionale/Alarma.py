@@ -6,7 +6,7 @@ print("Current hour in America is: ", ustz)
 
 wake_hour = int(input('Enter your waking hour: '))
 while wake_hour < 0 or wake_hour > 24:
-    print(int(input('Enter your waking hour: ')))
+    wake_hour = int(input("Invalid hour, please try again: "))
 if wake_hour == ustz:
     for i in range(10):
         print('ding')
