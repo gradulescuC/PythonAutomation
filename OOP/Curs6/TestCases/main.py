@@ -1,3 +1,4 @@
+
 from OOP.Curs6.curs_6 import BaseTest
 from test import TestCase1, TestCase2
 
