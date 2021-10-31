@@ -2,6 +2,7 @@
 
 Calculator class used for operations
 
+-- o clasa e un template pentru crearea obiectelor
 -- o functie aflata in interiorul unei clase se numeste metoda
 -- un constructor este un bloc de cod care ne poate ajuta sa definim atribute ale clasei valabile in toata clasa.
 -- sub o clasa putem ingloba toate functiile care au un scop comun, chiar daca rezultatul operatiilor lor va fi diferit
@@ -10,7 +11,7 @@ Calculator class used for operations
 
 """
 
-from OOP.Curs4 import mathOperations
+from OOP.curs_4 import mathOperations
 
 
 class Calculator:

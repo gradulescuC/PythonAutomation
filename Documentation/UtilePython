@@ -1,4 +1,5 @@
 pip3 install pylint -> instaleaza un utilitar pentru testare statica
+pip list -> listeaza toate utilitarele instalate
 pylint ex2.py -> Testeaza corectitudinea codului din punct de vedere standarde de codare si ofera optiuni de imbunatatire. Se executa in terminal
 
 Nota:

@@ -47,3 +47,7 @@
     pornind de la distanta intre cele doua locatii si folosindu-ne de viteza data ca parametru in constructor.
     Distanta intre cele doua locatii va fi data ca si parametru in metoda care calculeaza timpul,
     iar viteza vehiculului va fi data ca si parametru in constructor
+
+15. Creati o clasa masina care sa aiba definite metode, atribute
+    Creati un model de autovehicul (Abstractizare) care sa fie implementat de clasa masina si o clasa copil care sa mosteneasca clasa masina
+    si sa faca override la cel putin o metoda

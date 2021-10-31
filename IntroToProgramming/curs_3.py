@@ -1,4 +1,4 @@
-""""# Check the number of rabbits
+""""# Check the number of rabbits"""
 m_rabb = int(input("Introduceti numarul de iepuri masculi "))
 f_rabb = int(input("Introduceti numarul de iepuri femele "))
 if (m_rabb>0 and f_rabb>0):
@@ -41,7 +41,7 @@ for x in range(10):
     if x == 7:
         continue
     print(f"The number is {x}")
-"""
+
 # -------------------------------------------------------------
 # Functii
 
