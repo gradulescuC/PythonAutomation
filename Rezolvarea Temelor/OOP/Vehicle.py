@@ -6,8 +6,9 @@ class Vehicle:
         self._max_speed = max_speed
         self._mileage = mileage
 
-    def calculeazaTimp(self,_max_speed,distanta):
+    def calculeaza_timp(self,_max_speed,distanta):
         return int(distanta) /int(_max_speed)
+
 max_speed = input("Introduceti viteza maxima a masinii ")
 mileage = input("Introduceti kilometrajul masinii ")
 distanta = input("Introduceti distanta intre cele doua locatii ")

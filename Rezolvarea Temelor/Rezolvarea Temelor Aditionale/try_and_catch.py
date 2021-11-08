@@ -26,8 +26,8 @@ else:
         checkNumber(guess_number)
 
     except:
-        guess_number = int(input("Error! Must be a number between 1 and 10!\nTry again!"))
-        while len(guess_number)==0 or int(guess_number) < 1 or int(guess_number) > 10:
-            guess_number = input("Error! Must be a number between 1 and 10!\nTry again!")
+        guess_number = input("Error! Must be a number between 1 and 10!\nTry again: ")
+        while guess_number.isnumeric() == False or int(guess_number) < 1 or int(guess_number) > 10:
+            guess_number = input("Error! Must be a number between 1 and 10!\nTry again: ")
         checkNumber(int(guess_number))
 
