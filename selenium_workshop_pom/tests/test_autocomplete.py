@@ -19,7 +19,6 @@ class TestAutocomplete(TestCaseModel):
     def tear_down(self):
         self.home.quit_test()
 
-
 if __name__ == '__main__':  # se poate rula doar in fisierul asta nu si in alt fisier din cadrul pachetului
     test1 = TestAutocomplete()
     test1.setup()
