@@ -12,7 +12,7 @@ class TestContext(unittest.TestCase):
 
     def setUp(self) -> None:
         self.driver = webdriver.Chrome(
-            "/Users/gradulescu/Desktop/Personal/Cursuri/ITF/Automation Course/RepositoryGithub/PythonAutomation/selenium_workshop_pom/resources/chromedriver")
+            "/Users/gradulescu/Desktop/Personal/Cursuri/ITF/Automation Course/RepositoryGithub/PythonAutomation/04 - selenium_workshop_pom/resources/chromedriver")
         self.driver.get("https://the-internet.herokuapp.com")
 
     def test_context(self):

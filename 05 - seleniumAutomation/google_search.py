@@ -3,7 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome("/Users/gradulescu/Desktop/Personal/Cursuri/ITF/Automation Course/Proiecte Python/RepositoryGithub/PythonAutomation/selenium_workshop_pom/resources/chromedriver")
+driver = webdriver.Chrome("/04 - selenium_workshop_pom/resources/chromedriver")
 
 # driver  = element cu care putem avea acces la toate metodele de selenium
 driver.get("https://google.ro")

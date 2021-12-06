@@ -11,7 +11,7 @@ def test_case(input_data, expected_data):
 
 if __name__ == '__main__':
     data = get_input_data(
-        "/AutomationFramework_DDT/TestData/input_data.json")
+        "/03 - AutomationFramework_DDT/TestData/input_data.json")
     print(data)
     output = test_driven(data, test_case)  # nu apelam functia, ci doar ii returnam numele pentru a putea fi folosita mai departe
     print(output)

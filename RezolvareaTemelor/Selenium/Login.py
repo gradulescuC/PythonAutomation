@@ -8,7 +8,7 @@ pwd = (By.ID,"password")
 login = (By.CLASS_NAME,"radius")
 logout = (By.CLASS_NAME,"button")
 text_field = (By.CLASS_NAME,"subheader")
-driver = webdriver.Chrome("/Users/gradulescu/Desktop/Personal/Cursuri/ITF/Automation Course/RepositoryGithub/PythonAutomation/selenium_workshop_pom/resources/chromedriver")
+driver = webdriver.Chrome("/Users/gradulescu/Desktop/Personal/Cursuri/ITF/Automation Course/RepositoryGithub/PythonAutomation/04 - selenium_workshop_pom/resources/chromedriver")
 driver.get("https://the-internet.herokuapp.com/login")
 time.sleep(1)
 content = driver.find_element(*text_field).text

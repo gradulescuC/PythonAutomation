@@ -4,7 +4,7 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 
 
-driver = webdriver.Chrome("/Users/gradulescu/Desktop/Personal/Cursuri/ITF/Automation Course/RepositoryGithub/PythonAutomation/selenium_workshop_pom/resources/chromedriver")
+driver = webdriver.Chrome("/Users/gradulescu/Desktop/Personal/Cursuri/ITF/Automation Course/RepositoryGithub/PythonAutomation/04 - selenium_workshop_pom/resources/chromedriver")
 driver.get("https://www.openstreetmap.org")
 
 searchbar = driver.find_element(By.XPATH, "/html/body/div/div[1]/div[1]/form[1]/div/div[1]/div/div[1]/input")

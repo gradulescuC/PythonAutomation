@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 class Driver:
-    def __init__(self, browser="Chrome",path = "/Users/gradulescu/Desktop/Personal/Cursuri/ITF/Automation Course/RepositoryGithub/PythonAutomation/selenium_workshop_pom/resources/chromedriver"):
+    def __init__(self, browser="Chrome",path = "/Users/gradulescu/Desktop/Personal/Cursuri/ITF/Automation Course/RepositoryGithub/PythonAutomation/04 - selenium_workshop_pom/resources/chromedriver"):
         self._browser = browser
         self._path = path
 

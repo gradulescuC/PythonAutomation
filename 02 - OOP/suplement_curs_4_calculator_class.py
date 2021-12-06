@@ -42,7 +42,7 @@ class Calculator:
         return self._max2(self._num1, max2v2(self._num2, self._num3))
 
     def mathOperations(self, a, b, operation):
-        # from IntroToProgramming.OOP.Curs4 import mathOperations -> putem sa importam si local
+        # from 01 - IntroToProgramming.02 - OOP.Curs4 import mathOperations -> putem sa importam si local
         return mathOperations(a,b,operation)
 
 
