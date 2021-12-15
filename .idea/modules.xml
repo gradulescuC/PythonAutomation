@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../../PythonCourse/ProiectePython/AdditionalProject/.idea/AdditionalProject.iml" filepath="$PROJECT_DIR$/../../../PythonCourse/ProiectePython/AdditionalProject/.idea/AdditionalProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PythonAutomation.iml" filepath="$PROJECT_DIR$/.idea/PythonAutomation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../PythonCourse/ProiectePython/PythonBDDTest/.idea/PythonBDDTest.iml" filepath="$PROJECT_DIR$/../../../../PythonCourse/ProiectePython/PythonBDDTest/.idea/PythonBDDTest.iml" />
     </modules>
   </component>
 </project>
