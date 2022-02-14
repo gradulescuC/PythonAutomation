@@ -18,21 +18,21 @@ Notiuni de acoperit:
 expectedUsr = 'Gabriela'
 expectedPass = 'abcd'
 expectedSold = 1000
-user = input("Enter User ")
-assert user==expectedUsr
+# user = input("Enter User ")
+# assert user==expectedUsr
 
 # Acelasi exesrcitiu, varianta mai complicata
 
-userName = input("Enter your username: ")
-if len(userName) >= 6 and len(userName) <= 12:
-    print("Now enter your password")
-    userPassword = input("Enter your password: ")
-    if len(userPassword) >= 6 and len(userPassword) <= 12:
-        print("You are able to log in!!!")
-    else:
-        print("Incorrect password. Choose another.")
-else:
-    print("Incorrect username. Choose another.")
+# userName = input("Enter your username: ")
+# if len(userName) >= 6 and len(userName) <= 12:
+#     print("Now enter your password")
+#     userPassword = input("Enter your password: ")
+#     if len(userPassword) >= 6 and len(userPassword) <= 12:
+#         print("You are able to log in!!!")
+#     else:
+#         print("Incorrect password. Choose another.")
+# else:
+#     print("Incorrect username. Choose another.")
 
 # Variabilele sunt case sensitive, si putem sa alocam valoarea de la adresa de memorie a unei variabile la adresa de memorie a altei variabile
 # Exemplu
@@ -45,20 +45,20 @@ print(score)
 # ------------------------------------------------------------------------------------------------------------
 
 """ 2. Input de la tastatura """
-x = input("Enter the first number ") # Atribuirea unei valori de la tastatura unei variabile
-y = input("Enter second value ")
-output = int(x) + int(y) #  conversia fortata a unei variabile (by default de la tastatura se defineste string)
-output = int(x) % int(y)  # functia modulo - util cand verificam daca un numar este par sau impar
-x,y,z = 1,2,3
-print(z)
-print(f"{x} with {y} is {output}")
+# x = input("Enter the first number ") # Atribuirea unei valori de la tastatura unei variabile
+# y = input("Enter second value ")
+# output = int(x) + int(y) #  conversia fortata a unei variabile (by default de la tastatura se defineste string)
+# output = int(x) % int(y)  # functia modulo - util cand verificam daca un numar este par sau impar
+# x,y,z = 1,2,3
+# print(z)
+# print(f"{x} with {y} is {output}")
 
 # ------------------------------------------------------------------------------------------------------------
 
 """ 3. Formatarea in print"""
-
-print(f"{x} with {y} is {output}")  #printarea cu formatare
-print(f"{x} modulo {y} is {output}" )
+#
+# print(f"{x} with {y} is {output}")  #printarea cu formatare
+# print(f"{x} modulo {y} is {output}" )
 
 # Alte exemple de formatare:
 name = 'Johnny'
@@ -133,7 +133,7 @@ Selfish=[1,45,'test','andrada']
 Selfish[0] = '1212' # asta va merge pentru ca selfish nu mai e o variabila ci o lista, si lista nu este immutable
 print(Selfish)
 
-selfish = 'me me me'
+selfish = 'me me met'
 #01234567
 print(selfish[0])
 print(selfish[7])
@@ -147,7 +147,7 @@ print(selfish[0:8:2])
 #[-1]
 print(selfish[:5])
 print(selfish[::1])
-print(selfish[-1])
+print("Aici e " + selfish[-1])
 print(selfish[-3])
 print(selfish[::-1])
 print(selfish[::-2])
