@@ -126,7 +126,7 @@ if __name__ == '__main__':  # It checks if the program is executed individually 
 
 greet = 'Hello'
 print("Calculate the length of the string and print it entirely")
-print(len(greet)) # The len function shows how many characters there are in a string
+print(len(greet)) # The len function is the short version of length and it shows how many characters there are in a string
 print(greet[0:len(greet)]) # Here we applied the concept of slicing, which means that we can 'cut' the text and display it in 'slices'
                               # In this case we specified that we want to display everything from the beginning of the string (position 0) until we go through the entire length of the string
 quote = 'to be or not to be'
