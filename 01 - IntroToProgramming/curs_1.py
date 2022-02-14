@@ -114,7 +114,7 @@ if __name__ == '__main__':  # Verifica daca programul este executat individual s
     print(type(a))
     print(type(b))
     #c = a + b -> Returneaza eroare de concatenare pentru ca nu putem sa adunam un tip de date numeric cu un tip de date de tip text
-    c = str(a) + b
+    c = str(a) + b # Aici va fi ok pentru ca am facut CAST lui a catre string
     print(c)
     print(a)
 
@@ -123,15 +123,21 @@ if __name__ == '__main__':  # Verifica daca programul este executat individual s
 """ 6. Built in functions """
 
 greet = 'Hello'
-print(len(greet))
-print(greet[0:len(greet)])
+print("Calculate the length of the string and print it entirely")
+print(len(greet)) # Functia len arata cate caractere exista intr-un string
+print(greet[0:len(greet)]) # aici am aplicat conceptl de slicing, care inseamna ca putem sa "taiem" textul si sa afisam doar "felii" din el
+                                        #In cazul asta am specificat ca vrem sa afisam totul de la inceputul stringului (pozitia 0) pana cand parcurgem toata lungimea stringului
 quote = 'to be or not to be'
+print("Display the string in capitals - we can use upper or capitalize")
 print(quote.upper())
 print(quote.capitalize())
+print("Find the first instance of the word 'be' in the text stored in the variable 'quote'")
 print(quote.find('be'))
+print("Replace all the instances of 'be' with 'me'")
 print(quote.replace('be','me'))
 print(quote)
 name = 'Andreea'
+print("The type function can be used to display in the console the data type of a specific variable")
 print(type(name))
 name = 1
 print(type(name))
