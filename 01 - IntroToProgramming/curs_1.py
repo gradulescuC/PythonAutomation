@@ -1,99 +1,100 @@
 """
 
-Notiuni de acoperit:
-- Variabile (ce este o variabila, la ce foloseste, initializarea unei variabile)
+Notions to cover:
+- Variables (What is a variabile, what is it used for, how to initialize a variable)
 - Input
 - Print
-- Formatarea in print
-- Constante (ce este o constanta, la ce foloseste, cum se declara)
+- Format inside print
+- Constants (What is a constant, what can we use it for, how can we declare it)
 - Dunder methods
 - Built-in Functions
 - Immutability
 """
 
-#  Comentariile in python sunt de doua tipuri:
-#       - single line comment - marcat de #
-#       - multi-line comment - marcat de trei ghilimele/apostroafe de o parte si de alta a comentariului
+# There are two types of comments in python
+#       - single line comment - marked by #
+#       - multi-line comment - marked by three double quotes/single quotes on each side of the comment
 
 
-"""1. Variabile + print"""
+"""1. Variables + print"""
 
-# O variabila este o adresa de memorie la care sunt stocate anumite informatii
-# Spre deosebire de alte limbaje de programare, in python o variabila nu e creata decat in momentul in care ii alocam o valoare
+# A variable is a rezerved memory space where we can store information
+# Unlike other programming languages, in python a variable is created only when a value is assigned to it
 
-# Exercitiu: Verifica daca userul dat de la tastatura este acelasi cu userul stocat intr-o variabila
+# Exercise: Check if the user given as input is the same as the user stored in a specific variable
 
 expectedUsr = 'Gabriela'
 expectedPass = 'abcd'
 expectedSold = 1000
 user = input("Enter User ")
-assert user==expectedUsr
+assert user==expectedUsr # assert evaluates of the evaluated expression is true. If not, it returns error and it stops the execution of the program
 
-# Acelasi exesrcitiu, varianta mai complicata
+# Same exercise, more complicated
 
 userName = input("Enter your username: ")
-if len(userName) >= 6 and len(userName) <= 12: # punem un if statement care verifica daca userul are intre 6 si 12 caractere cu ajutorul functiei len
+if len(userName) >= 6 and len(userName) <= 12: # Here we use an if statement which checks if the user is between 6 and 12 characters with the help of the len function
     print("Now enter your password")
     userPassword = input("Enter your password: ")
-    if len(userPassword) >= 6 and len(userPassword) <= 12: # daca userul e corect, verificam acelasi lucru si pentru parola
+    if len(userPassword) >= 6 and len(userPassword) <= 12: # if the user is correct, we do the same thing with the password
         print("You are able to log in!!!")
     else:
         print("Incorrect password. Choose another.")
 else:
     print("Incorrect username. Choose another.")
 
-# Nota: pentru a afla mai multe despre o functie se poate da CTRL+Click pe functia respectiva
+# Note: In order to find out more about a function, we can use CTRL+Click on the specific function
 
-# Variabilele sunt case sensitive, si putem sa alocam valoarea de la adresa de memorie a unei variabile la adresa de memorie a altei variabile
-# Exemplu
-user_5 = 100 #instructiune de definire si initializare a unei variabile
-#print(uSer_5) # nu va merge pentru ca numele variabilei este case sensitive, iar sistemul nu va recunoaste numele asta
-score = user_5 # atribuirea valorii variabilei user_5 la variabila score
+# Variables are case sensitive
+# We can copy the value from a variable into another variable
+# Example
+user_5 = 100 # instruction for defining and initializing a variable
+#print(uSer_5) #  This will not work because the variable name is case sensitive and the system will not recognise this name
+score = user_5 # here we assign the value of user_5 to the variable calles 'score'
 print(score)
 
 # ------------------------------------------------------------------------------------------------------------
 
-""" 2. Input de la tastatura """
-x = input("Enter the first number ") # Atribuirea unei valori de la tastatura la o variabila
+""" 2. Input from keyboard """
+x = input("Enter the first number ") # We assign a value from the keyboard to the variable x
 y = input("Enter second value ")
-output = int(x) + int(y) #  conversia fortata (CAST) a unei variabile (by default de la tastatura se defineste string)
-output = int(x) % int(y)  # functia modulo - util cand verificam daca un numar este par sau impar - returneaza restul impartirii lui x la y
-x,y,z = 1,2,3 # putem sa initializam trei variabile in acelasi timp
+output = int(x) + int(y) #  we apply forced conversion (CAST) to a variable (by default the data type of the value given from the keyboard is String)
+output = int(x) % int(y)  # the modulo function - useful when we check if a number is odd or even - it returns the remainder from the devision of x by y
+x,y,z = 1,2,3 # we can declare and initialise three variables at the same time
 print(z)
-print(f"{x} with {y} is {output}") # f-ul din fara anunta sistemul ca urmeaza sa trimitem niste valori din niste variabile in interiorul textului de afisat
+print(f"{x} with {y} is {output}") # The f in the front lets the system know that we are about to send some variables inside the text that should be read, not displayed as text
 
 # ------------------------------------------------------------------------------------------------------------
 
-""" 3. Formatarea in print"""
+""" 3. Formating in print"""
 
-print(f"{x} with {y} is {output}")  #printarea cu formatare
+print(f"{x} with {y} is {output}")  #print with formating
 print(f"{x} modulo {y} is {output}" )
 
 # Alte exemple de formatare:
 name = 'Johnny'
 age = 55
 
-print('Hi' + name + '. You\'re' + str(age) + 'years old') # Exemplu fara formatare.
-                                                             # Am scris You\'re cu caracterul  "\"
-                                                                # (numit escape character pentru ca am vrut ca sistemul sa considere
-                                                                    # apostroful drept caracter de afisat pe ecran, nu sfarsitul textului)
-print(f'Hi {name}, You are {age} years old') # Exemplu cu formatare
+print('Hi' + name + '. You\'re' + str(age) + 'years old') # Exemple without formating
+                                                             # We wrote You\'re with the character  "\" called escape character
+                                                                # because we wanted the system to consider the sigle quote as a character to be displayed on the screen,
+                                                                     # not as the end of the text to be displayed
+print(f'Hi {name}, You are {age} years old') # Example with formatting
 
-# Formatarea inainte de python 3 se facea cu functia .format:
-# Exemple:
+# Before python 3, formating was done with the function .format
+# Example:
 
-print('Hi {}. You  are {} years old.'.format('Johnny',55)) # Aici acoladele vor fi inlocuite in ordine cu valorile din paranteze
+print('Hi {}. You  are {} years old.'.format('Johnny',55)) # Here the brackets will be replaced sequantially with the values between parantheses
 print('Hi {}. You  are {} years old.'.format(name, age))
-print('Hi {new_name}. You  are {new_age} years old.'.format(new_name = 'sally', new_age=100)) # Aici am definit in-line valorile pentru name si age
+print('Hi {new_name}. You  are {new_age} years old.'.format(new_name = 'sally', new_age=100)) # Here we defined in-line the values for name and age
 
 
 # ------------------------------------------------------------------------------------------------------------
 
 """4. CONSTANTE"""
 
-# Constantele nu sunt suportate de python, motiv pentru care orice vrem sa definim ca si constanta
-# in python va fi scrisa ca si conventie cu majuscule, pentru a anunta eventualele persoane care vor folosi codul
-# Constant = spatiu de memorie care nu isi poate schimba valoarea
+# Constant = memory space that cannot/should not change its value
+# Constants are not supported by python, and that's why if we want to define something as a constant, as a convention we will use
+                                        #capital letters so that people know that that is a constant
 # Useful when generating all sort of utilities for automation, where we define test inputs that should not change their behaviour
 # Ex: username, sleep between automation test steps (we can agree at project level the sleep time)
 
@@ -102,19 +103,20 @@ PI = 3.14
 # ------------------------------------------------------------------------------------------------------------
 """5. Dunder methods -> DUNDER = Double underscore"""
 
-# Exemple de dunders:
-_x = 7 #specifica o variabila considerata prin conventie PROTECTED ce nu poate fi folosita in alte pachete. Nu este DUNDER
-__x = 8 # Variabilele cu __ sunt considerate prin conventie PRIVATE, dar aceste DUNDER sunt rezervate pentru metode specifice python, si nu este recomandam sa definim variabile de tip DUNDER
+# Examples of dunders:
+_x = 7  # it specifies a variable considered through convention as PROTECTED (it cannot be used in other packages). It is NOT dunder
+__x = 8 # Variables preceded by __ are dunders and are a way to define PRIVATE variables (they cannot be used outside the class).
+                    # The dunders are usually python reserved, so it is not recommended to defined variables as dunders
 
-#Exemplu de dunders:
-if __name__ == '__main__':  # Verifica daca programul este executat individual sau este apelat dintr-un alt program
+#Example of dunders:
+if __name__ == '__main__':  # It checks if the program is executed individually or it is called from another program
     print("Another module")
-    a: int = 5 # putem sa declaram o variabila si in felul asta specificandu-i in mod explicit tipul de data
-    b: str = 'Ana are mere'
+    a: int = 5 # We ca declare a variable also by explicitely declaring the data type
+    b: str = 'Johny goes to school'
     print(type(a))
     print(type(b))
-    #c = a + b -> Returneaza eroare de concatenare pentru ca nu putem sa adunam un tip de date numeric cu un tip de date de tip text
-    c = str(a) + b # Aici va fi ok pentru ca am facut CAST lui a catre string
+    #c = a + b -> Here it will return concatenation error because we cannot sum a numerical data type with a string data type
+    c = str(a) + b # Here it will be ok because we did a CAST to string for the variable a
     print(c)
     print(a)
 
@@ -124,9 +126,9 @@ if __name__ == '__main__':  # Verifica daca programul este executat individual s
 
 greet = 'Hello'
 print("Calculate the length of the string and print it entirely")
-print(len(greet)) # Functia len arata cate caractere exista intr-un string
-print(greet[0:len(greet)]) # aici am aplicat conceptl de slicing, care inseamna ca putem sa "taiem" textul si sa afisam doar "felii" din el
-                                        #In cazul asta am specificat ca vrem sa afisam totul de la inceputul stringului (pozitia 0) pana cand parcurgem toata lungimea stringului
+print(len(greet)) # The len function shows how many characters there are in a string
+print(greet[0:len(greet)]) # Here we applied the concept of slicing, which means that we can 'cut' the text and display it in 'slices'
+                              # In this case we specified that we want to display everything from the beginning of the string (position 0) until we go through the entire length of the string
 quote = 'to be or not to be'
 print("Display the string in capitals - we can use upper or capitalize")
 print(quote.upper())
@@ -143,13 +145,30 @@ name = 1
 print(type(name))
 
 # ------------------------------------------------------------------------------------------------------------
-""" 7. immutability -> Nu putem sa modificam doar o anumita pozitie intr-o variabila """
+""" 7. immutability -> Immutable is the when no change is possible over time. 
+In Python, if the value of an object cannot be changed over time, then it is known as immutable. 
+Once created, the value of these objects is permanent. 
+Also, when we replace the data in a variable we do not actually replace it, we point the same variable name to a different memory location
+"""
+
+print("Immutability example")
+age = 42
+print(id(age))  # Here it returned the id 140207831785040 (might be different on some other system/laptop/pc and might differ between runs)
+print(type(age))
+print(age)
+
+print("We assign a new value to the variable, but it will actually not replace but define another memory to which the variable age will point")
+age = 43
+print(age)
+print(id(age)) #  Here it returned the id 140207831785072 because we point towards some other address in the memory
+
+
 selfish = 1
 print(selfish)
-# selfish[0] = '1212' #Va returna eroare pentru va variabilele sunt immutable
+# selfish[0] = '1212' # It will return error because we cannot replace part of the data in a variable
 
 Selfish=[1,45,'test','andrada']
-Selfish[0] = '1212' # asta va merge pentru ca selfish nu mai e o variabila ci o lista, si lista nu este immutable
+Selfish[0] = '1212' # This will work because selfish is no longer a variable but a list, and the list is not immutable
 print(Selfish)
 
 selfish = 'me me met'
