@@ -149,6 +149,21 @@ print(type(name))
 In Python, if the value of an object cannot be changed over time, then it is known as immutable. 
 Once created, the value of these objects is permanent. 
 Also, when we replace the data in a variable we do not actually replace it, we point the same variable name to a different memory location
+
+
+Python Data Types – Immutable Type
+Boolean
+Numeric
+String
+Tuple
+
+--------------------------------
+
+Python Data Types – Mutable Type
+List
+Set
+Dictionary
+
 """
 
 print("Immutability example")
@@ -163,32 +178,54 @@ print(age)
 print(id(age)) #  Here it returned the id 140207831785072 because we point towards some other address in the memory
 
 
-selfish = 1
-print(selfish)
-# selfish[0] = '1212' # It will return error because we cannot replace part of the data in a variable
+list_example=[1,45,'test','andrada'] # we can add different types of data to a list
+list_example[0] = '1212' # This will work because selfish is a list, and the list is not immutable
+print(list_example)
 
-Selfish=[1,45,'test','andrada']
-Selfish[0] = '1212' # This will work because selfish is no longer a variable but a list, and the list is not immutable
-print(Selfish)
+variable_int_example = 5678
+# print(variable_int_example[0]) # This will return an error: TypeError: 'int' object is not subscriptable
 
-selfish = 'me me met'
-#01234567
-print(selfish[0])
-print(selfish[7])
+""" Subscriptable means that the object implements the __getitem__() method.
+ In other words, it describes objects that are "containers", meaning they contain other objects. 
+ This includes strings, lists, tuples, and dictionaries, but not int
+ 
+ Note: In programming, the index of subscriptable objects ALWAYS starts with 0
+ 
+
+"""
+variable_example = 'testWordExample'
+print(variable_example[0])  # This will no longer return error, because this time we try to slice a string, and strings are subscriptable
+print(variable_example[7])
+
+print("Slicing exercises")
+""""Slicing model: object_name[start:stop:stepover] """
 
 #[start]
-print(selfish[1:])
+print("Here we print exerything starting from the index 1 until the end (which means we exclude the first a)")
+print(variable_example[1:])  # here we print exerything starting from the index 1 until the end (which means we exclude the first a)
+                                    # If we do not specify the stop and stepover, they will be by default stop = until the end and stepover = 1
+
 #[start:stop]
-print(selfish[0:8])
+print("Here will print everything from index 0 until index 8")
+print(variable_example[0:8]) # here will print everything from index 0 until index 8
+
 #[start:stop:stepover]
-print(selfish[0:8:2])
-#[-1]
-print(selfish[:5])
-print(selfish[::1])
-print("Aici e " + selfish[-1])
-print(selfish[-3])
-print(selfish[::-1])
-print(selfish[::-2])
+print("Here will print everything from index 0 until index 8, but it will only print every second character")
+print(variable_example[0:8:2])
+
+print("Here it will print everything from the start util the index 5. If start is not specified, it will be by default index 0")
+print(variable_example[:5])
+
+print("Here it will print everything from the start util the end, with a stepover of 1 - we had to specify '::', otherwise the system will have considered the 1 as start""")
+print(variable_example[::1])
+
+print("Here it will print the third character from the end (- means that it will start from the end instead of beginning and 3 is the position of the character in the string)")
+print(variable_example[-3])
+print("Here it will print everything from the end backwards with a step of 1 - which is pretty much the same as no stepover")
+print(variable_example[::-1])
+print("Here it will print everything from the end backwards with a step of 2")
+print(variable_example[::-2])
+
 
 
     
