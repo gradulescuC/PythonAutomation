@@ -1,4 +1,192 @@
 """
+NOTIONS TO COVER:
+
+- Assignment Operators
+- ARITHMETICAL OPERATORS
+- LOGICAL OPERATORS
+- FLOW CONTROL
+- Lists
+- Tuples
+- Sets
+- Dictionaries
+
+"""
+
+"""
+1. ASSIGNMENT OPERATORS 
+
+Assignment operators are python elements that we can use to give value to a variable/list/set/tuple/dictionary 
+"""
+print("The equal operator assigns a value to a variable")
+x = 3 # the number 3 is stored at the memory location where the variable x is defined
+print(x)
+print("-------------------------------------")
+
+print("The '+=' operator increases the value of the variable on the left with the value on the right")
+x = x+3
+print(x)
+x+= 3
+print(x)
+print("-------------------------------------")
+
+print("The '-=' operator decreases the value of the variable on the left with the value on the right")
+x = x - 3
+print(x)
+x-=3
+print(x)
+print("-------------------------------------")
+
+print("The '*=' operator multiples the value of the variable on the left by the value on the right")
+x = x*3
+print(x)
+x*=3
+print(x)
+print("-------------------------------------")
+
+print("The '/=' operator divides the value of the variable on the left by the value on the right")
+x = x/3
+print(x)
+x/=3
+print(x)
+print("-------------------------------------")
+
+"""
+2. ARITHMETICAL OPERATORS
+
+Arithmetical operators are used to perform mathematical operations on between numbers
+"""
+
+print("This is the sum of 4 and 6: ")
+print(4+6)
+print()
+print("This is the remainder from dividing 10 by 3: ")
+print(10%3)
+print()
+print("This is the value of 2 raised to the power of 3: ")
+print(2**3)
+
+
+"""
+
+3.COMPARISON OPERATORS
+
+As the name indicates, these operators are used to make comparisons between two numbers
+
+"""
+
+y = 2
+x = 2
+print("Check if x is 2. Notice that the comparison operator is '==' and the assignment operator is '=': ")
+print(x==2)
+print()
+print("Check if x and y are equal: ")
+print(x==y)
+print()
+print("Check if x is not 2: ")
+print(x!=2)
+print()
+print("Check if x and y are different: ")
+print(x!=y)
+print()
+print("Check if x is greater than 2: ")
+print(x>2)
+print("Check if x is greater than y")
+print(x>y)
+print()
+print("Check if x is smaller than 2: ")
+print(x<2)
+print()
+print("Check if x is smaller than y: ")
+print(x<y)
+print()
+print("Check if x is greater or equal than 2: ")
+print(x>=2)
+print()
+print("Check if x is greater or equal than y: ")
+print(x>=y)
+print()
+print("Check if x is smaller or equal than 2: ")
+print(x<=2)
+print()
+print("Check if x is smaller or equal than y: ")
+print(x<=y)
+
+"""
+LOGICAL OPERATORS
+
+A logical operator is a symbol or word used to connect two or more expressions such that the 
+value of the compound expression produced depends only on that of the original expressions and on the meaning of the operator
+
+The AND operator has a higher value than the OR operator
+EVALUATION EXAMPLES:
+
+TRUE AND TRUE = TRUE
+TRUE AND FALSE = FALSE
+TRUE OR TRUE = TRUE
+TRUE OR FALSE = TRUE
+
+"""
+
+print("Check if x is smaller than 2 AND x is smaller than y")
+print(x<2 and x<y)
+print()
+print("Check if x is equal to 2 AND x is smaller than y")
+print(x==2 and x<y)
+print()
+print("Check if x is equal to 2 AND x is equal to y")
+print(x==2 and x==y)
+print()
+print("Check if x is equal to 2 OR x is smaller to y")
+print(x==2 or x<y)
+
+y = 2
+x = 2
+print("test")
+print("The NOT operator returns the opposite of the result of the expression evaluation. If it returns false, NOT will set it to true, and the other way round")
+print(not(x==2 or x<y))  # this will return false: x==2 is TRUE, x<y is false, TRUE OR FALSE  = TRUE so NOT TRUE  = FALSE
+
+print(not(x==2 or x<y))
+print(x<y and x>y and x == y)
+print(x<y or x>y and x <= y)
+
+# D. FLOW CONTROL
+
+PASS_GRADE = 4.5 # constant that we do not want to change it's value
+BEHAVIOUR_PASS_GRADE = 7
+exam_grade = 10
+behaviour_grade = 10
+if exam_grade >= PASS_GRADE and behaviour_grade >= BEHAVIOUR_PASS_GRADE:
+    print("You passed")
+    if exam_grade==10 and behaviour_grade==10:
+        print("Congrats, you are great")
+else: # Else does not have a condition because it means the instructions to be executed in case the previous condition is evaluated as false
+    print("You didn't pass")
+
+
+option = int(input("Choose the language. For romanian press 1, for english press 2"))
+if option == 1:
+    print("You chose romanian")
+    option1 = input("For individuals press 1, for companies press 2")
+    if(option1 == 1):
+        print("You chose individual")
+    elif(option1 == 2):
+        print("You chose company")
+    else:
+        print("Invalid option. Please try again")
+elif option==2:
+    print("You chose english")
+    optiune1 = input("For individuals persons press one, for companies press 2")
+    if (optiune1 == 1):
+        print("You chose individual person")
+    elif (optiune1 == 2):
+        print("You chose a company")
+    else:
+        print("Invalid option, please try again")
+elif option == 3:
+    print("Return to main menu")
+
+
+"""
 
 Lists
 
@@ -142,7 +330,6 @@ Unordered means that the items does not have a defined order, you cannot refer t
 
 
 """
-
 print("There are two ways of defining a dictionary: ")
 print("a) By in-line defining of key:value pairs")
 myDict1 = dict(a=1, b="Bella Ciao")

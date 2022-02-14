@@ -1,14 +1,18 @@
 """
 
 Notions to cover:
+
+
 - Variables (What is a variabile, what is it used for, how to initialize a variable)
+- Assert
 - Input
-- Print
-- Format inside print
+- Print and Format inside print
 - Constants (What is a constant, what can we use it for, how can we declare it)
+- Data Types
+- Type Casting
 - Dunder methods
 - Built-in Functions
-- Immutability
+- Strings and  Immutability
 """
 
 # There are two types of comments in python
@@ -16,12 +20,20 @@ Notions to cover:
 #       - multi-line comment - marked by three double quotes/single quotes on each side of the comment
 
 
-"""1. Variables + print"""
+"""1. Variables + print
 
-# A variable is a rezerved memory space where we can store information
-# Unlike other programming languages, in python a variable is created only when a value is assigned to it
+A variable is a rezerved memory space where we can store information
+Unlike other programming languages, in python a variable is created only when a value is assigned to it
 
-# Exercise: Check if the user given as input is the same as the user stored in a specific variable
+Rules for naming a variable:
+- variable names must not contain spaces
+- variable names must not be named with reserved words (for example we cannot name a variable as print)
+- variable names must be unique
+- variable names must not start with a number (they can contain numbers as long as they do not start with one)
+- usually variables follow the format snake_case or camelCase (usually snake_case)
+- variable names should start with lowercase
+- variables are case sensitive
+"""
 
 expectedUsr = 'Gabriela'
 expectedPass = 'abcd'
@@ -54,7 +66,30 @@ print(score)
 
 # ------------------------------------------------------------------------------------------------------------
 
-""" 2. Input from keyboard """
+
+""" 
+
+2. ASSERT
+
+
+- Assert is a way to make a validation
+- It checks if a specific statement is evaluated as true
+- If it is true, the code moves on, otherwise it returns error and the run stops
+- Normally all automated tests finish with an assert
+"""
+a = 1
+assert a==1
+print("This test passed")
+# assert a == 2
+# print("this will return error and will not be executed")
+print(a==2)
+
+userpass = input("introdu parola ")
+parola = "pass123"
+assert parola == userpass
+print("autentificare reusita")
+
+""" 3. Input from keyboard """
 x = input("Enter the first number ") # We assign a value from the keyboard to the variable x
 y = input("Enter second value ")
 output = int(x) + int(y) #  we apply forced conversion (CAST) to a variable (by default the data type of the value given from the keyboard is String)
@@ -65,7 +100,7 @@ print(f"{x} with {y} is {output}") # The f in the front lets the system know tha
 
 # ------------------------------------------------------------------------------------------------------------
 
-""" 3. Formating in print"""
+""" 4. Formating in print"""
 
 print(f"{x} with {y} is {output}")  #print with formating
 print(f"{x} modulo {y} is {output}" )
@@ -90,7 +125,8 @@ print('Hi {new_name}. You  are {new_age} years old.'.format(new_name = 'sally', 
 
 # ------------------------------------------------------------------------------------------------------------
 
-"""4. CONSTANTE"""
+
+"""5. CONSTANTS"""
 
 # Constant = memory space that cannot/should not change its value
 # Constants are not supported by python, and that's why if we want to define something as a constant, as a convention we will use
@@ -101,7 +137,59 @@ print('Hi {new_name}. You  are {new_age} years old.'.format(new_name = 'sally', 
 PI = 3.14
 
 # ------------------------------------------------------------------------------------------------------------
-"""5. Dunder methods -> DUNDER = Double underscore"""
+
+"""
+
+6. DATA TYPES
+
+
+A data type is an information that informs the system about the type of information we can store in a specific variable
+
+The most used data types in python:
+- int (short for integer) -> Can store only integer values (1,2,9,99,167834534 etc)
+- float -> Can store decimal numbers (16 decimal points)
+- bool (short for boolean) -> Can store true or false values  (with first letter in capital letter)
+- string -> Can store text
+"""
+
+age = 3
+quantity = 24.5
+isActive = True
+customer_name = "john"
+
+float_nr = 123456789.1234567890123456
+print(float_nr)
+
+# We cannot concatenate two variables having two data types, but we have workarounds for this
+name = 'Michael'
+age = 33
+# print("My name is" + name + "and I have" + age + "years old") - this will return error because we cannot concatenate string and numeric data types
+print("My name is" + name + "and I have" + str(age) + "years old") # this will work
+print("my name is {0} and I am {1} years old ".format(name,age))  #this is harder to read and it is not recommended.
+print(f"My name is {name} and I have {age} years old") # this is the best option (the most optimal)
+                            #f forces the variables between brackets to be treated as strings
+                            #f is short for - format string -
+
+"""
+
+7. TYPE CASTING
+
+Type casting means changing the data type of the value in a specific variable
+
+"""
+
+type_casting_example = 33
+print('---------------------------')
+print(type(type_casting_example))
+print(type(float(type_casting_example)))
+print(type(str(type_casting_example)))
+type_casting_example_1 = float(type_casting_example)
+print(type(type_casting_example), type(type_casting_example_1))
+
+
+
+
+"""8. Dunder methods -> DUNDER = Double underscore"""
 
 # Examples of dunders:
 _x = 7  # it specifies a variable considered through convention as PROTECTED (it cannot be used in other packages). It is NOT dunder
@@ -122,7 +210,7 @@ if __name__ == '__main__':  # It checks if the program is executed individually 
 
 # ------------------------------------------------------------------------------------------------------------
 
-""" 6. Built in functions """
+""" 9. Built in functions """
 
 greet = 'Hello'
 print("Calculate the length of the string and print it entirely")
@@ -145,10 +233,11 @@ name = 1
 print(type(name))
 
 # ------------------------------------------------------------------------------------------------------------
-""" 7. immutability -> Immutable is the when no change is possible over time. 
+""" 10. STRING (index, len, slicing, metode) / Immutability -> Immutable is when no change is possible over time in a variable. 
 In Python, if the value of an object cannot be changed over time, then it is known as immutable. 
 Once created, the value of these objects is permanent. 
 Also, when we replace the data in a variable we do not actually replace it, we point the same variable name to a different memory location
+We can slice a string by using the following sintax: my_str[start_pos,end_pos,step]
 
 
 Python Data Types – Immutable Type
@@ -196,6 +285,7 @@ variable_int_example = 5678
 variable_example = 'testWordExample'
 print(variable_example[0])  # This will no longer return error, because this time we try to slice a string, and strings are subscriptable
 print(variable_example[7])
+print()
 
 print("Slicing exercises")
 """"Slicing model: object_name[start:stop:stepover] """
@@ -226,6 +316,28 @@ print(variable_example[::-1])
 print("Here it will print everything from the end backwards with a step of 2")
 print(variable_example[::-2])
 
+print()
+print("String methods")
+sentence = "My name is python and i am a snakes"
+print(sentence.count('a')) # counts how many times do we have the character a in the string
+print(sentence.upper())
+print(sentence.replace('i','y'))
+# https://stackoverflow.com/questions/509211/understanding-slice-notation/46614773 -> More info about slice notation
+myStr = 'Today is wednesday'
+# I want to go through it until the one before the last character
+# I want to find out the last index
+last_index = len(myStr)-1 # we add -1 because the index starts from 0
+print(last_index) # we check the last index
+print(f"The last letter in '{myStr}' is '{myStr[last_index]}'")
+print(myStr[0:last_index])
+part1 = sentence[0] # we save the first character
+part2 = sentence[1:].replace('s','$')
+print(part1,part2)
+
+print("String index")
+print(myStr[0])
+print(myStr[10])
+print(myStr[last_index])
 
 
     
