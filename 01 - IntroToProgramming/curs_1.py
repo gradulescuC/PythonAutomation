@@ -311,17 +311,20 @@ print(variable_example[::1])
 
 print("Here it will print the third character from the end (- means that it will start from the end instead of beginning and 3 is the position of the character in the string)")
 print(variable_example[-3])
-print("Here it will print everything from the end backwards with a step of 1 - which is pretty much the same as no stepover")
+print("Here it will print everything from the end backwards")
 print(variable_example[::-1])
 print("Here it will print everything from the end backwards with a step of 2")
 print(variable_example[::-2])
 
 print()
 print("String methods")
-sentence = "My name is python and i am a snakes"
+sentence = "Mn name is python and i am a snakes"
 print(sentence.count('a')) # counts how many times do we have the character a in the string
 print(sentence.upper())
 print(sentence.replace('i','y'))
+print(sentence.find('y'))
+print("This is the split sentence")
+print(sentence.split())
 # https://stackoverflow.com/questions/509211/understanding-slice-notation/46614773 -> More info about slice notation
 myStr = 'Today is wednesday'
 # I want to go through it until the one before the last character

@@ -64,6 +64,8 @@ print(10%3)
 print()
 print("This is the value of 2 raised to the power of 3: ")
 print(2**3)
+print("This is a floor division and shows how many times does three fit into 7")
+print(7//3)
 
 
 """
@@ -163,10 +165,10 @@ else: # Else does not have a condition because it means the instructions to be e
     print("You didn't pass")
 
 
-option = int(input("Choose the language. For romanian press 1, for english press 2"))
+option = int(input("Choose the language. For romanian press 1, for english press 2 "))
 if option == 1:
     print("You chose romanian")
-    option1 = input("For individuals press 1, for companies press 2")
+    option1 = input("For individuals press 1, for companies press 2 ")
     if(option1 == 1):
         print("You chose individual")
     elif(option1 == 2):
@@ -175,7 +177,7 @@ if option == 1:
         print("Invalid option. Please try again")
 elif option==2:
     print("You chose english")
-    optiune1 = input("For individuals persons press one, for companies press 2")
+    optiune1 = input("For individuals persons press one, for companies press 2 ")
     if (optiune1 == 1):
         print("You chose individual person")
     elif (optiune1 == 2):
@@ -252,6 +254,11 @@ print(3 in a)
 print()
 print()
 print()
+
+print("We can also remove all the values in the list using del or clear:")
+del a[0:]
+a.clear()
+
 
 
 """
@@ -379,6 +386,14 @@ print()
 print("And also with an entire item: ")
 items = list(d1.items())
 print(items[1])
+
+print("Now let's remove a value from myDict")
+myDict.pop(True)
+print(f"The new dictionary is {myDict}")
+
+print("We can also update the value for an existing key. If the key does not exist it will be added ")
+myDict["a"] = "New data for a" # it will update the value for a from "My data for a" to "New data for a"
+myDict["d"] = "Data for d" # it will add a new key:value pair in myDict: "d":"Data for d"
 
 
 """
